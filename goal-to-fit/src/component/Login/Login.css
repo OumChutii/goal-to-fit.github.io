@@ -1,0 +1,119 @@
+section{
+    /* border: 2px solid rgb(4, 110, 13); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    /* font-family: 'Outfit', sans-serif; */
+    padding: 0.5rem 0rem;
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    /* border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; */
+    outline: none;
+}
+label{
+    margin-top: 1em;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    max-width: 400px;
+    margin: 0px 0px;
+    /* border: 2px solid red; */
+  }
+
+.head-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 350px ;
+    /* border: 2px solid rgb(47, 0, 255); */
+}
+
+.sing-in{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items:flex-start; */
+    /* border: 2px solid rgb(47, 0, 255); */
+    /* padding: 0px 50px; */
+    margin-top: 20px;
+
+}
+
+.sing-in input{
+    border-bottom: 1px solid #9c9c9c;
+}
+
+.button-sing-in {
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    /* padding: 1rem 1.5rem; */
+    height: 2.5em;
+    width: 100%;
+    color: #ffffff;
+    background-color: #f85f6a; 
+    margin-top: 20px ;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+ }
+
+.social-profiles{
+    /* border: 2px solid rgb(47, 0, 255); */
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-start; 
+}
+
+.social-profiles div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 2px solid rgb(251, 255, 0); */
+}
+
+.button-google {
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    /* padding: 1rem 1.5rem; */
+    height: 2.5em;
+    width: 90%;
+    color: #ffffff;
+    background-color: salmon; 
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+ }
+
+ .button-facebook {
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    /* padding: 1rem 1.5rem; */
+    height: 2.5em;
+    width: 90%;
+    color: #ffffff;
+    background-color: #3b5998; 
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+ }
+
+
