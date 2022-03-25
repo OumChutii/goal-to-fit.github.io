@@ -27,13 +27,13 @@ const Login = () => {
                       <h1 className="secondary-text-color">Goal to fit</h1>
                   </div>
                  
-                  <div className="sing-in">
-                      <h3 className="secondary-text-color">Sign In</h3>
+                  <div className="login">
+                      <h3 className="secondary-text-color">log In</h3>
                       <label className="primary-text-color" htmlFor="Email" >Email</label>
                       <input type="email" placeholder="sophie@example.com"/>
                       <label className="primary-text-color" htmlFor="Password" >Password</label>
                       <input type="password" placeholder="***********"/>
-                      <button className="button-sing-in" >Sign In</button>
+                      <button className="button-login" >log In</button>
                   </div>
                   
                   <div>
@@ -47,7 +47,7 @@ const Login = () => {
                           </div>
                           <div>
                               <button className="button-facebook"><i className="fa fa-facebook" aria-hidden="true"> </i>  FACEBOOK</button>   
-                              <a className="primary-text-color" href="#">Sign Up</a>
+                              <a className="primary-text-color" href="#">log Up</a>
                           </div>
                       </div>
   
