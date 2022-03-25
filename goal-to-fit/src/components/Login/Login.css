@@ -16,9 +16,7 @@ input{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; */
     outline: none;
 }
-label{
-    margin-top: 1em;
-}
+
 .container{
     width: 100%;
     display: flex;
@@ -28,15 +26,6 @@ label{
     margin: 0px 0px;
     /* border: 2px solid red; */
   }
-
-.head-logo{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 350px ;
-    /* border: 2px solid rgb(47, 0, 255); */
-}
 
 .login{
     display: flex;
@@ -49,9 +38,9 @@ label{
 
 }
 
-.login input{
+/* .login input{
     border-bottom: 1px solid #9c9c9c;
-}
+} */
 
 .button-login {
     align-self: center;

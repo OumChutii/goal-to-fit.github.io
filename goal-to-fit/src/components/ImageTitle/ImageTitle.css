@@ -1,0 +1,15 @@
+.head-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 350px ;
+    /* border: 2px solid rgb(47, 0, 255); */
+}
+
+.icon-logo{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1rem; 
+    opacity: 50%;      
+}

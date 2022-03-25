@@ -16,7 +16,7 @@ const Signup = () => {
                       <input type="email" placeholder="sophie@example.com"/>
                       <label className="primary-text-color" htmlFor="Password" >Password</label>
                       <input type="password" placeholder="***********"/>
-                      <button className="button-signup" >Signup</button>
+                      <button className="button-signup" >Continue</button>
                   </div>
                   
                   <div>
