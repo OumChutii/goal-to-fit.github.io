@@ -28,7 +28,11 @@ const Login = () => {
                         />
                         <Button>Login</Button>                      
                     </div>
-                    <NoAccount />                
+                    <NoAccount tagtitle='Don’t have an account?'
+                               textA1='Forgot Password?'
+                               textA2='Sign Up'
+                               
+                    />                
                 </div>
           </section>
           
