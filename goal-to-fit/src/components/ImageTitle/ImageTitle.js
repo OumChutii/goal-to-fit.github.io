@@ -1,7 +1,7 @@
 import React from "react";
 import './ImageTitle.css'
 
-const ImageTitle = ( { children, imgSrc = './img/gtf-logo.png' }) => {
+const ImageTitle = ( { children, imgSrc }) => {
     return (
                 <div className="head-logo">
                     <img className="icon-logo" src={imgSrc}/>                       

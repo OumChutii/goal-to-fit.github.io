@@ -1,7 +1,8 @@
-label{
+.add-input label{
     margin-top: 1em;
 }
 
-input{
+.add-input input{
     border-bottom: 1px solid #9c9c9c;
+    width: 100%;
 }
