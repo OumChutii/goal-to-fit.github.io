@@ -134,7 +134,7 @@ nav::after{ /* เส้นใต้ nav */
     display: block;
     width: 100%;
     clear: both;
-    border-top: 1px solid lightgray;
+    /* border-top: 1px solid lightgray; */
     margin-top: 10px;
     margin-bottom: 10px;
 }
