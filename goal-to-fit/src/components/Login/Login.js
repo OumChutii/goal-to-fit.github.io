@@ -36,7 +36,7 @@ const Login = () => {
                 </div>
           </section>
           
-          <Footer>&copy; Right 2022 : Goal to fit</Footer>
+          <Footer>©Copy Right 2022 : Goal to fit</Footer>
          
       
       </div>

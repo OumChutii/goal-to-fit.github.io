@@ -1,7 +1,8 @@
 import React from 'react';
 // import Login from '../Login/Login';
 // import Signup from '../Signup/Signup';
-import ActivityReport from '../ActivityReport/ActivityReport';
+// import ActivityReport from '../ActivityReport/ActivityReport';
+import ActivityReport2 from '../ActivityReport-2/ActivityReport2';
 import './App.css';
 
 
@@ -11,7 +12,8 @@ function App() {
     <>
       {/* <Login /> */}
       {/* <Signup /> */}
-      <ActivityReport />
+      {/* <ActivityReport /> */}
+      <ActivityReport2 />
     </>
   );
 }
