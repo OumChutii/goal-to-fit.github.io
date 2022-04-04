@@ -27,7 +27,8 @@
     --primary-background-color: #f6f6f6;
 
     --primary-text-color: #f85f6a;
-    --secondary-text-color: #a9b3bb;
+    --secondary-text-color: #929292;
+    --third--text-color:  #a9b3bb;
 
     --primary-navfooter-color: #929292;
     --secondary-navfooter-color: #d7d7d7;
@@ -126,7 +127,7 @@ a{
 body{
     font-family: Roboto, sans-serif;
     height: 100%;
-    background-color: var(--primary-background-color);
+    /* background-color: var(--primary-background-color); */
     
 }
 

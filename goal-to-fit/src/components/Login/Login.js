@@ -13,7 +13,10 @@ const Login = () => {
       <div> 
           <section>
                 <div className="container"> 
-                    <ImageTitle imgSrc={'./img/gtf-logo.png'}>Goal to fit</ImageTitle>                 
+                    <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"head-logo"}
+                    classImg={"icon-logo"}>
+                        Goal to fit
+                    </ImageTitle>                 
                     <div className="login">
                         <Title>Login</Title>
                         <Input htmlFor="Email" label='Email'
