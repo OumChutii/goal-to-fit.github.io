@@ -147,7 +147,8 @@ textarea {
 .goal-date-time {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0 60px 0;
+    margin: 20px 0 20px 0;
+    flex-wrap: wrap;
 }
 
 .start-time {
@@ -164,8 +165,9 @@ textarea {
 /* date-button */
 .data-goal {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 /* .goal-date-time input[type=checkbox] {
@@ -221,3 +223,16 @@ textarea {
     font-size: 1em;
     margin: 0;
 } */
+.active-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 50px;
+}
+
+.active-form div {    
+    display: block;
+    width: 20%;
+    
+}

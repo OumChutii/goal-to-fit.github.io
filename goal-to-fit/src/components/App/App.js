@@ -11,8 +11,8 @@ import './App.css';
 function App() {
   return (
     <>
-      {/* <Login /> */}
-      {/* <Signup /> */}
+      {/* <Login />
+      <Signup /> */}
       {/* <ActivityReport /> */}
       {/* <ActivityReport2 /> */}
       <UserForm  />
