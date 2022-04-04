@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css"
 
 
-function NaveBar({pageTitle}) {
+function NaveBar({pageTitle="Please Add Pagetitle"}) {
 
     return (
         <div className="bg-nav">
@@ -53,6 +53,7 @@ function NaveBar({pageTitle}) {
                     </div>
                 </header>
             </nav>
+            <hr className="d-none d-md-block mt-0 mb-0" />
         </div>
 
     );

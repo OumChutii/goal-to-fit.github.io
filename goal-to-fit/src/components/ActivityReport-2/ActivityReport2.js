@@ -12,7 +12,7 @@ const ActivityReport2 = () => {
             <div className="wrapper">
                 <NaveBar pageTitle="Activity Report" />
                 {/* <!-- TOP NAV END --> */}
-                <hr className="d-none d-md-block mt-0 mb-0" />
+                
                 {/* <!-- -------------------------------------------------------------------------- -->
 
                         <!-- MAIN CONTENT SECTION START --> */}
