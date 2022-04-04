@@ -3,7 +3,7 @@ import React from 'react';
 // import Signup from '../Signup/Signup';
 // import ActivityReport from '../ActivityReport/ActivityReport';
 import ActivityReport2 from '../ActivityReport-2/ActivityReport2';
-import UserFrom from '../UserFrom/UserFrom';
+import UserForm from '../UserForm/UserForm';
 import './App.css';
 
 
@@ -15,7 +15,7 @@ function App() {
       {/* <Signup /> */}
       {/* <ActivityReport /> */}
       {/* <ActivityReport2 /> */}
-      <UserFrom  />
+      <UserForm  />
     </>
   );
 }

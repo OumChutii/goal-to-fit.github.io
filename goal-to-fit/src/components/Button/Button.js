@@ -1,9 +1,11 @@
 import React from "react";
 import './Button.css'
 
-const Button = ( { children }) => {
+const Button = ( { className="button-submit",children, ...props }) => {
     return (
-             <button className="button" > {children} </button>
+            <from>
+                <button className={className} {...props} > {children} </button>
+            </from>
     );
 }
 

@@ -9,9 +9,7 @@ input[type="date"], input[type="number"] {
 textarea {
     border: 2px solid #929292;
     border-radius: 5px;
-    background-color: white;
-    font-size: 1em;
-    color: #929292;
+    color: white;
     background-color: #929292;
     width: 100%;
 }
@@ -49,7 +47,7 @@ textarea {
 .profile-infomation div {
     display: flex;
     flex-direction: column;
-    width: 20%;
+    /* width: 20%; */
 }
 
 /* button */
@@ -140,6 +138,29 @@ textarea {
     margin: 20px 0px;
 }
 
+.profile-goal input {
+    width: 20%;
+}
+
+
+/* goal-date-time */
+.goal-date-time {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 60px 0;
+}
+
+.start-time {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.start-time div input {
+    width: 100%;   
+}
+
 /* date-button */
 .data-goal {
     display: flex;
@@ -147,7 +168,7 @@ textarea {
     gap: 15px;
 }
 
-.goal-date-time input[type=checkbox] {
+/* .goal-date-time input[type=checkbox] {
     appearance: none;
     position: relative;
     cursor: pointer;
@@ -155,9 +176,9 @@ textarea {
     height: 50px;
     margin-top: 3px;
     border: none;
-}
+} */
 
-.goal-date-time input[type=checkbox]:before {
+/* .goal-date-time input[type=checkbox]:before {
     content: "";
     display: block;
     position: absolute;
@@ -168,9 +189,9 @@ textarea {
     background-color: #a9b3bb;
     border: 2px solid #a9b3bb;
     border-radius: 100%;
-}
+} */
 
-.goal-date-time input[type=checkbox]:checked:before {
+/* .goal-date-time input[type=checkbox]:checked:before {
     content: "";
     display: block;
     position: absolute;
@@ -183,15 +204,15 @@ textarea {
     color: white;
     border-radius: 100%;
 
-}
+} */
 
 
-.goal-date-time label {
+/* .goal-date-time label {
     position: relative;
 
-}
+} */
 
-.goal-date-time label p {
+/* .goal-date-time label p {
     position: absolute;
     color: white;
     top: 15px;
@@ -199,31 +220,4 @@ textarea {
     font-weight: 500;
     font-size: 1em;
     margin: 0;
-}
-
-
-
-
-
-/* goal-date-time */
-.goal-date-time {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0 60px 0;
-}
-
-.start-time {
-    display: flex;
-    flex-direction: column;
-}
-
-.start-time div {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    height: 30px;
-}
-
-.start-time div input {
-    width: 100%;   
-}
+} */

@@ -141,9 +141,9 @@ nav::after{ /* เส้นใต้ nav */
     margin-bottom: 10px;
 }
 
-input{
+/* input{
     background-color: var(--primary-background-color);
-}
+} */
 
 .nav-header{
     padding-top: 10px;

@@ -19,17 +19,17 @@ const Login = () => {
                     </ImageTitle>                 
                     <div className="login">
                         <Title>Login</Title>
-                        <Input htmlFor="Email" label='Email'
+                        <Input  className="add-input" htmlFor="Email" label='Email'
                                 id='email' type='text' name='email' 
                                 placeholder='Enter your email' 
                                 //  value={email} 
                                 //  isInvalid={isInvalid}
                                 //  onChange={e => setEmail(e.target.value)}
                         /> 
-                        <Input htmlFor="Password" label='Password' 
+                        <Input className="add-input" htmlFor="Password" label='Password' 
                                 id='Password'  type="password" placeholder="***********"                      
                         />
-                        <Button>Login</Button>                      
+                        <Button  type="submit" value="submit">Login</Button>                      
                     </div>
                     <NoAccount tagtitle='Don’t have an account?'
                                textA1='Forgot Password?'

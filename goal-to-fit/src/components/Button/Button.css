@@ -1,9 +1,24 @@
-.button {
+.button-submit {
     align-self: center;
     background-color: #f85f6a; 
     border-radius: 10px;
     border: none;
     color: #ffffff;
+    /* padding: 1rem 1.5rem; */
+    height: 2.5em;
+    width: 100%;
+    margin-top: 20px ;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    outline: none;
+ }
+
+ .button-reset {
+    align-self: center;
+    background-color: var(--primary-button-meal); 
+    border-radius: 10px;
+    border: none;
+    color: var(--primary-icon-color);
     /* padding: 1rem 1.5rem; */
     height: 2.5em;
     width: 100%;

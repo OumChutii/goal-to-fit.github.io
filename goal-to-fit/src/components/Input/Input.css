@@ -7,14 +7,29 @@
     width: 100%;
 }
 
-input[type="date"], input[type="number"] {
+div p {
+    margin: 0;
+}
+
+input[type="date"], input[type="number"], input[type="time"]  {
     border: 2px solid #929292;
     border-radius: 5px;
     background-color: white;
-    font-size: 1em;
-    
+    font-size: 1em;    
 }
+
+input[type="date"], input[type="number"], input[type="time"] ::a {
+    border: 2px solid #929292;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 1em;    
+}
+
 
 .display-none{
     display: none;
+}
+
+.display-block{
+    display: block;
 }
