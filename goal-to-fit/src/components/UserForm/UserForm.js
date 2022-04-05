@@ -22,7 +22,11 @@ const UserForm = ({ }) => {
                 </div>
                 <div className="profile-infomation">
                     <div >
-                        <SwitchButton textLeft="MELE" textRight="FEMELE" textSwitch="gender">gender</SwitchButton>
+                        <SwitchButton textLeft="MELE" textRight="FEMELE" textOnSwitch="gender"
+                            inputName="gender"
+                        >
+                            gender
+                        </SwitchButton>
                     </div>
                     <div className="profile-year-of-birth">
                         <Input htmlFor="yearBirth" label="year of birth"

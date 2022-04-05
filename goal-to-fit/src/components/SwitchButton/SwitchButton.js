@@ -1,15 +1,16 @@
 import React from "react";
 import "./SwitchButton.css"
 
-const SwitchButton = ({ children = "Please Add Title",textLeft ="textLeft" ,textRight="textRight", textSwitch }) => {
+const SwitchButton = ({ children = "",textLeft ="textLeft" ,textRight="textRight", 
+                        textOnSwitch, classLabel="display-block", inputName="" }) => {
     return (
         <>
-            <label htmlFor={children}>{children}</label>
+            <label className={classLabel} htmlFor={children}>{children}</label>
             <section>
-                <label htmlFor="toggle-1" className="toggle-1">
-                    <input type="checkbox" name="toggle-1" id="toggle-1" className="toggle-1__input"
-                         />
-                    <span className={` toggle-1__button ${textSwitch}`}>
+                <label htmlFor={inputName} className="toggle-1">
+                    <input type="checkbox"  className="toggle-1__input"
+                      name={inputName} id={inputName}  />
+                    <span className={` toggle-1__button ${textOnSwitch}`}>
                         <p>{textLeft}</p>
                         <p>{textRight}</p>
                     </span>

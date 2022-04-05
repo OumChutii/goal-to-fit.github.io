@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../Footer/Footer'
-import NaveBar from '../NavBar/NavBar';
+import NavBar from '../NavBar/NavBar';
 import './dist/ActivityReport2.css'
 
 const ActivityReport2 = () => {
@@ -10,7 +10,7 @@ const ActivityReport2 = () => {
         <body>
             {/* <!-- ใส่ background พื้นหลังทั้งหน้าจอ ที่ tag body --> */}
             <div className="wrapper">
-                <NaveBar pageTitle="Activity Report" />
+                <NavBar pageTitle="Activity Report" />
                 {/* <!-- TOP NAV END --> */}
                 
                 {/* <!-- -------------------------------------------------------------------------- -->
