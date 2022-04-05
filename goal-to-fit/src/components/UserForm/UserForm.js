@@ -55,13 +55,13 @@ const UserForm = ({ }) => {
                     <div className="exercise-day">
                         <label>Exercise day</label>
                         <div className="data-goal">
-                            <CheckDateBox name="mon" value="monday"    >MON</CheckDateBox>
-                            <CheckDateBox name="tue" value="tuesday"   >TUE</CheckDateBox>
-                            <CheckDateBox name="wed" value="wednesday" >WED</CheckDateBox>
-                            <CheckDateBox name="thu" value="thursday"  >THU</CheckDateBox>
-                            <CheckDateBox name="fri" value="friday"    >FRI</CheckDateBox>
-                            <CheckDateBox name="sat" value="saturday"  >SAT</CheckDateBox>
-                            <CheckDateBox name="sun" value="sunday"    >SUN</CheckDateBox>
+                            <CheckDateBox name="mon" value="monday"    >M</CheckDateBox>
+                            <CheckDateBox name="tue" value="tuesday"   >TU</CheckDateBox>
+                            <CheckDateBox name="wed" value="wednesday" >W</CheckDateBox>
+                            <CheckDateBox name="thu" value="thursday"  >TH</CheckDateBox>
+                            <CheckDateBox name="fri" value="friday"    >F</CheckDateBox>
+                            <CheckDateBox name="sat" value="saturday"  >SA</CheckDateBox>
+                            <CheckDateBox name="sun" value="sunday"    >SU</CheckDateBox>
                         </div>
 
                     </div>

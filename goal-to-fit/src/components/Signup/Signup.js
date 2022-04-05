@@ -12,13 +12,13 @@ const Signup = () => {
     return (
         <div>
             <section>
-                <div className="container">
+                <div className="containe-signup">
                     <div className="head-signup"></div>
                     <div className="login">
                         <Title>Sign Up</Title>
                         <Input className="add-input"  htmlFor="Email" label='Email'
-                            id='email' type='text' name='email'
-                            placeholder='Enter your email'
+                            id="email" type="email" name="email"
+                            placeholder="Enter your email"
                         //  value={email} 
                         //  isInvalid={isInvalid}
                         //  onChange={e => setEmail(e.target.value)}
@@ -27,6 +27,7 @@ const Signup = () => {
                             id='Password' type="password" placeholder="***********"
                         />
                         <AgreeMent id="terms" type="checkbox" name="terms" value="on" />
+
                         <Button type="submit" value="submit">Continue</Button>
                     </div>
                     <NoAccount  textA1='Forgot Password?'
