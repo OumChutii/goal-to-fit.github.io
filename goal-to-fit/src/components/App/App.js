@@ -1,24 +1,29 @@
 import React from 'react';
-// import Login from '../Login/Login';
-// import Signup from '../Signup/Signup';
-// import ActivityReport from '../ActivityReport/ActivityReport';
-// import ActivityReport2 from '../ActivityReport-2/ActivityReport2';
-// import UserForm from '../UserForm/UserForm';
-import ActivitySelection from '../ActivitySelection/ActivitySelection';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ActivityReport from '../Pages/ActivityReport';
+import Login from '../Pages/Login';
+import Signup from '../Pages/Signup';
+import ActivitySelection from '../Pages/ActivitySelection';
+import UserForm from '../Pages/UserForm';
 import './App.css';
 
 
 
 function App() {
   return (
-    <>
-      {/* <Login />
-      <Signup /> */}
-      {/* <ActivityReport /> */}
-      {/* <ActivityReport2 /> */}
-      {/* <UserForm  /> */}
-      <ActivitySelection />
-    </>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="Login" element={<Login />} />
+        <Route path="signup" element={<Signup />} />
+        <Route path="profile" element={<UserForm />} />
+        <Route path="activity-report" element={<ActivityReport />} />       
+        <Route path="ativity-selection" element={<ActivitySelection />} />
+      </Routes>
+    </BrowserRouter>
+
+
   );
 }
 

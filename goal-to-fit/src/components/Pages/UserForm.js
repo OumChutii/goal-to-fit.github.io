@@ -5,7 +5,7 @@ import SwitchButton from "../SwitchButton/SwitchButton";
 import CheckDateBox from "../CheckDateBox/CheckDateBox";
 import Button from "../Button/Button"
 import Footer from "../Footer/Footer";
-import './UserForm.css'
+import '../UserForm/UserForm.css'
 
 
 const UserForm = ({ }) => {
@@ -15,7 +15,7 @@ const UserForm = ({ }) => {
 
             <section className="container-userfrom ">
                 <div className="profile-name  secondary-text-color ">
-                    <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"profile-name"}
+                    <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"profile-name-image_title"}
                         classImg={"icon-logo"}>
                         Goal to fit
                     </ImageTitle>
@@ -44,8 +44,8 @@ const UserForm = ({ }) => {
                         />
                     </div>
                 </div>
-                <div >
-                    <Input className="profile-goal" htmlFor="goal" label="Goal"
+                <div className="user-goal" >
+                    <Input className="user-goal"  htmlFor="goal" label="Goal"
                         type="number" placeholder="(kg)" name="weight"
                     />
 

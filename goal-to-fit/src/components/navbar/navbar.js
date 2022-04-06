@@ -1,6 +1,7 @@
 import React from "react";
 import "./NavBar.css"
 import NavBarButton from "./NavBarButton/NavBarButton";
+import { Link, Route, Outlet } from "react-router-dom";
 
 
 
@@ -20,16 +21,23 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
                         </div>
                         <div className="col-8 d-flex justify-content-end align-items-center">
                             <ul className="menu-nav">
-                                <NavBarButton fontAwesome="fa-home" aHref="#" >
-                                    Home
-                                </NavBarButton>
-                                <NavBarButton fontAwesome="fa-user" aHref="#" >
-                                    Profile
-                                </NavBarButton>
-                                <NavBarButton aClassName="menu-link btn-logout" fontAwesome="fa-power-off"
-                                    aHref="#" >
-                                    Logout
-                                </NavBarButton>
+                                <Link to="/activity-report" >
+                                    <NavBarButton fontAwesome="fa-home" aHref="#" >
+                                        Home
+                                    </NavBarButton>
+                                </Link>
+                                <Link to="/profile">
+                                    <NavBarButton fontAwesome="fa-user" aHref="#" >
+                                        Profile
+                                    </NavBarButton>
+                                </Link>
+                                <Link to="/login">
+                                    <NavBarButton aClassName="menu-link btn-logout" fontAwesome="fa-power-off"
+                                        aHref="#" >
+                                        Logout
+                                    </NavBarButton>
+                                </Link>
+                                
                             </ul>
                         </div>
                     </div>

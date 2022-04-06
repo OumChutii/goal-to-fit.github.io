@@ -1,9 +1,9 @@
 import React from 'react';
 import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar';
-import './dist/ActivityReport2.css'
+import '../ActivityReport/dist/ActivityReport.css'
 
-const ActivityReport2 = () => {
+const ActivityReport = () => {
 
     return (
 
@@ -469,4 +469,4 @@ const ActivityReport2 = () => {
     );
 }
 
-export default ActivityReport2;
+export default ActivityReport;

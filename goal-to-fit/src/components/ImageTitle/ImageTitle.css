@@ -1,4 +1,4 @@
-.head-logo{
+.head-logo-image_title{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -7,14 +7,14 @@
     /* border: 2px solid rgb(47, 0, 255); */
 }
 
-.head-logo img{
+.head-logo-image_title img{
     width: 200px;
     height: 200px;
     margin-bottom: 1rem; 
     opacity: 50%;      
 }
 
-.profile-name {
+.profile-name-image_title {
     /* border: 2px solid blue; */
     width: 100%;
     height: 200px;
@@ -24,7 +24,7 @@
     gap: 10px;
 }
 
-.profile-name img {
+.profile-name-image_title img {
     width: 100px;
     height: 100px;
     /* background-color: var(--primary-navfooter-color); */

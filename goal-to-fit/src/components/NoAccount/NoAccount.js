@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import './NoAccount.css'
 
 const NoAccount = ( { tagtitle, textA1, textA2, href1 = '#', href2 = '#'  } ) => {
@@ -9,10 +10,11 @@ const NoAccount = ( { tagtitle, textA1, textA2, href1 = '#', href2 = '#'  } ) =>
             </p>
             <div className="social-profiles">
                 <div>
-                 <a href={href1}>{textA1}</a>
+                <NavLink to={href1}  className="primary-text-color">{textA1}</NavLink>
                 </div>
                 <div>
-                 <a className="primary-text-color" href={href2}>{textA2}</a>
+                    <NavLink to={href2}  className="primary-text-color">{textA2}</NavLink>
+                 {/* <a className="primary-text-color" href={href2}>{textA2}</a> */}
                 </div>
             </div>
   

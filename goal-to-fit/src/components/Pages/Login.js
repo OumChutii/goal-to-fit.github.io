@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
-import './Login.css'
+import { Link } from "react-router-dom";
+import '../Login/Login.css'
 import ImageTitle from "../ImageTitle/ImageTitle";
 import Title from "../Title/Title"
 import Input from "../Input/Input";
@@ -11,16 +12,16 @@ const Login = () => {
   
     return (
       <div> 
-          <section>
-                <div className="container"> 
-                    <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"head-logo"}
+          <section className="section-login">
+                <div className="container-login"> 
+                    <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"head-logo-image_title"}
                     classImg={"icon-logo"}>
                         Goal to fit
                     </ImageTitle>                 
                     <div className="login">
                         <Title>Login</Title>
                         <Input  className="add-input" htmlFor="Email" label='Email'
-                                id='email' type='text' name='email' 
+                                id='email' type='email' name='email' 
                                 placeholder='Enter your email' 
                                 //  value={email} 
                                 //  isInvalid={isInvalid}
@@ -29,11 +30,14 @@ const Login = () => {
                         <Input className="add-input" htmlFor="Password" label='Password' 
                                 id='Password'  type="password" placeholder="***********"                      
                         />
-                        <Button  type="submit" value="submit">Login</Button>                      
+                        <Link to="/profile">
+                             <Button  type="submit" value="submit">Login</Button>
+                        </Link>                      
                     </div>
+
                     <NoAccount tagtitle='Don’t have an account?'
-                               textA1='Forgot Password?'
-                               textA2='Sign Up'
+                               textA1='Forgot Password?' href1="/"
+                               textA2='Sign Up' href2="/signup"
                                
                     />                
                 </div>

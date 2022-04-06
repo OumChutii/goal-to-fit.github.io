@@ -7,7 +7,7 @@
     /* border: 2px solid rgb(47, 0, 255); */
 }
 
-section{
+.signup-section{
     /* border: 2px solid rgb(4, 110, 13); */
     display: flex;
     justify-content: center;
@@ -20,8 +20,8 @@ input[type="email"], input[type="password"]{
     padding: 0.5rem 0rem;
     font-size: 1rem;
     border: none;
-    /* border-radius: 0.5rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; */
+    border-bottom: 1px solid #9c9c9c;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px; */
     outline: none;
 }
 

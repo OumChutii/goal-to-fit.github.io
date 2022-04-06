@@ -606,4 +606,3 @@ const ActivityReport = () => {
     )
 };
 
-export default ActivityReport;
