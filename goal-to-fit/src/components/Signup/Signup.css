@@ -36,3 +36,14 @@ input[type="email"], input[type="password"]{
     /* position: relative; */
     /* border: 2px solid red; */
   }
+
+  .singup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items:flex-start; */
+    /* border: 2px solid rgb(47, 0, 255); */
+    /* padding: 0px 50px; */
+    margin-top: 20px;
+
+}

@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 30px;
-    position: relative;
+    /* position: relative; */
     color: var(--secondary-text-color) ;
 }
  
@@ -15,7 +15,7 @@
     padding-left: 15px;
 }
 
-.AgreeMent label a {
+.AgreeMent label span {
     color: var(--primary-text-color);
     font-weight: 600;
     font-size: 1em;
@@ -71,4 +71,6 @@ input[type=checkbox]:checked:after {
     top: 3.5px;
     left: 5px;
 }
+
+
 

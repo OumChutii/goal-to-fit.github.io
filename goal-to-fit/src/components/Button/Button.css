@@ -37,3 +37,9 @@
    color: #ffffff;
    background-color: #72bb52;
 }
+
+.disabled{
+   
+   background-color: var(--third--text-color);
+   color: white;
+}
