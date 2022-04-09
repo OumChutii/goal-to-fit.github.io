@@ -57,7 +57,7 @@
    
     
 }
-input[type=checkbox]:checked:after {
+.AgreeMent input[type=checkbox]:checked:after {
     content: "";
     display: block;
     width: 6px;

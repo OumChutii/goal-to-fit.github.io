@@ -3,9 +3,9 @@ import './Button.css'
 
 const Button = ( { className="button-submit",children, ...props }) => {
     return (
-            <from>
+            <span>
                 <button className={className} {...props} > {children} </button>
-            </from>
+            </span>
     );
 }
 

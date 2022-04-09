@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar';
 import '../ActivityReport/dist/ActivityReport.css'
+import { Link, NavLink } from 'react-router-dom';
 
 const ActivityReport = () => {
 
@@ -41,12 +42,12 @@ const ActivityReport = () => {
                                             </div>
                                             <div className="create-btn col-4 d-none d-md-flex px-0">
                                                 <div className="col-auto d-flex justify-content-end align-items-center">
-                                                    <a href="ActivityCreate.html" className="d-flex justify-content-center primary-red align-items-center">
+                                                    <NavLink to="/ativity-selection" className="d-flex justify-content-center primary-red align-items-center">
                                                         {/* <!-- Right Button --> */}
                                                         <i className="fa fa-plus"></i>
                                                         {/* <!-- Right Button --> */}
                                                         <p className="weight-300 primary-text-color ml-2 my-0" htmlFor="nav-btn-plus">Create activity</p>
-                                                    </a>
+                                                    </NavLink>
                                                 </div>
                                             </div>
                                             <div className="col-12 profile-goal">
@@ -321,130 +322,7 @@ const ActivityReport = () => {
                                     <!-- RIGHT COLUMN START --> */}
                             <div className="col-12 col-md-4 col-lg-7 order-3 order-md-5 order-lg-5 d-none d-md-block mt-3" id="donut">
                                 <div className="card">
-                                    <div className="card-body d-md-flex d-lg-flex justify-content-center align-items-center text-center">
-                                        {/* <!-- Donut chart --> */}
-                                        <svg className="m-1 circle-chart-day"
-                                            viewBox="0 0 33.83098862 33.83098862"
-                                            width="160"
-                                            height="160"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle className="circle-chart-day-background"
-                                                stroke="#efefef"
-                                                strokeWidth="2"
-                                                fill="none"
-                                                cx="16.91549431"
-                                                cy="16.91549431"
-                                                r="15.91549431" />
-                                            <circle className="circle-chart-day-circle circle-chart-day-circle-negative"
-                                                stroke="#00acc1"
-                                                strokeWidth="2"
-                                                strokeDasharray="60,100"
-                                                strokeLinecap="round"
-                                                fill="none"
-                                                cx="16.91549431"
-                                                cy="16.91549431"
-                                                r="15.91549431" />
-                                            <g className="circle-chart-day-info">
-                                                <text className="circle-chart-day-percent"
-                                                    x="16.91549431"
-                                                    y="15.5"
-                                                    alignmentBaseline="central"
-                                                    textAnchor="middle"
-                                                    fontSize="8">
-                                                    -60%
-                                                </text>
-                                                <text className="circle-chart-day-subline"
-                                                    x="16.91549431"
-                                                    y="20.5"
-                                                    alignmentBaseline="central"
-                                                    textAnchor="middle"
-                                                    fontSize="2.5">
-                                                    Today
-                                                </text>
-                                            </g>
-                                        </svg>
-                                        <svg className="m-1 circle-chart-week"
-                                            viewBox="0 0 33.83098862 33.83098862"
-                                            width="160"
-                                            height="160"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle className="circle-chart-week-background"
-                                                stroke="#efefef"
-                                                strokeWidth="2"
-                                                fill="none"
-                                                cx="16.91549431"
-                                                cy="16.91549431"
-                                                r="15.91549431" />
-                                            <circle className="circle-chart-week-circle"
-                                                stroke="#00acc1"
-                                                strokeWidth="2"
-                                                strokeDasharray="30,100"
-                                                strokeLinecap="round"
-                                                fill="none"
-                                                cx="16.91549431"
-                                                cy="16.91549431"
-                                                r="15.91549431" />
-                                            <g className="circle-chart-week-info">
-                                                <text className="circle-chart-week-percent"
-                                                    x="16.91549431"
-                                                    y="15.5"
-                                                    alignmentBaseline="central"
-                                                    textAnchor="middle"
-                                                    fontSize="8">
-                                                    30%
-                                                </text>
-                                                <text className="circle-chart-week-subline"
-                                                    x="16.91549431"
-                                                    y="20.5"
-                                                    alignmentBaseline="central"
-                                                    textAnchor="middle"
-                                                    fontSize="2.5">
-                                                    Last week
-                                                </text>
-                                            </g>
-                                        </svg>
-                                        <svg className="m-1 circle-chart-year"
-                                            viewBox="0 0 33.83098862 33.83098862"
-                                            width="160"
-                                            height="160"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle className="circle-chart-year-background"
-                                                stroke="#efefef"
-                                                strokeWidth="2"
-                                                fill="none"
-                                                cx="16.91549431"
-                                                cy="16.91549431"
-                                                r="15.91549431" />
-                                            <circle className="circle-chart-year-circle"
-                                                stroke="#00acc1"
-                                                strokeWidth="2"
-                                                strokeDasharray="10,100"
-                                                strokeLinecap="round"
-                                                fill="none"
-                                                cx="16.91549431"
-                                                cy="16.91549431"
-                                                r="15.91549431" />
-                                            <g className="circle-chart-year-info">
-                                                <text className="circle-chart-year-percent"
-                                                    x="16.91549431"
-                                                    y="15.5"
-                                                    alignmentBaseline="central"
-                                                    textAnchor="middle"
-                                                    fontSize="8">
-                                                    10%
-                                                </text>
-                                                <text className="circle-chart-year-subline"
-                                                    x="16.91549431"
-                                                    y="20.5"
-                                                    alignmentBaseline="central"
-                                                    textAnchor="middle"
-                                                    fontSize="2.5">
-                                                    This year
-                                                </text>
-                                            </g>
-                                        </svg>
-                                        {/* <!-- Donut chart --> */}
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div className="col-12 col-md-12 col-lg-12 order-last px-0" id="ads">

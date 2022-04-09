@@ -33,3 +33,7 @@
                             );
                         })}
                     </> */}
+
+                    setUserName(nameToCheck);
+
+                    alert(`This ${nameToCheck} is already taken palese Change.`)

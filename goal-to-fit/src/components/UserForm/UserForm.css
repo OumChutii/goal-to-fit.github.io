@@ -1,9 +1,3 @@
-input[type="date"], input[type="number"] {
-    border: 2px solid #929292;
-    border-radius: 5px;
-    background-color: white;
-    font-size: 1em;    
-}
 
 textarea {
     border: 2px solid #929292;
@@ -24,6 +18,13 @@ textarea {
     /* border: 2px solid red; */
 }
 
+.container-userfrom input[type="date"], input[type="number"] {
+    border: 2px solid #929292;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 1em;
+    width: 100%;    
+}
 .container-userfrom label {
     color: var(--secondary-text-color);
     font-weight: 500;
@@ -31,22 +32,28 @@ textarea {
     margin: 0 0 10px 0;
 }
 
+.user-profile{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
+}
 
-
-.profile-infomation {
+.user-infomation {
     /* border: 2px solid blue; */
     display: flex;
     justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;
-    gap: 10px;
+    /* flex-wrap: wrap; */
+    gap: 20px;
     margin-top: 30px;
 }
 
-.profile-infomation div {
+.user-infomation div {
     display: flex;
     flex-direction: column;
-    /* width: 20%; */
+    
 }
 
 /* button */
@@ -133,7 +140,7 @@ textarea {
 /* profile-goal */
 .user-goal {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     width: 100%;
     margin: 20px 0px;

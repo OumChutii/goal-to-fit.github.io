@@ -8,8 +8,9 @@
 }
 
 
-div p {
+.p-input {
     margin: 0;
+    font-size: 0.5em;
 }
 
 input[type="date"], input[type="number"], input[type="time"], input[type="text"] {
@@ -17,6 +18,7 @@ input[type="date"], input[type="number"], input[type="time"], input[type="text"]
     border-radius: 5px;
     background-color: white;
     font-size: 1em;    
+   
 }
 
 
