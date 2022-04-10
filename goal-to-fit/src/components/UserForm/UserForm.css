@@ -141,14 +141,15 @@ textarea {
 .user-goal {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     margin: 20px 0px;
 }
-
+/* 
 .user-goal input {
-    width: 20%;
-}
+    width: calc(100/3.5);
+} */
 
 
 /* goal-date-time */

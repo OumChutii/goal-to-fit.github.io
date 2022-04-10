@@ -19,7 +19,11 @@ const UserForm = ({ }) => {
     const [userHeight, setUserHeight] = useState("")
     const [userWeight, setUserWeight] = useState("")
     const [userBMI, setUserBMI] = useState("")
-    const [userGoal, setUserGoal] = useState([{}])
+    const [userGoal, setUserGoal] = useState([{
+        "goal": "",
+        "quantity": "",
+        "duration": ""
+    }])
 
     // validate username
     let nameToCheck = "";
@@ -89,7 +93,7 @@ const UserForm = ({ }) => {
     }, [userHeight, userWeight])
 
     // addgoal
-    
+
 
 
     return (
