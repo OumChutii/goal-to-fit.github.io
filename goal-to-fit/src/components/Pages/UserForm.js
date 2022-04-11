@@ -6,9 +6,10 @@ import CheckDateBox from "../CheckDateBox/CheckDateBox";
 import Button from "../Button/Button"
 import Footer from "../Footer/Footer";
 import '../UserForm/UserForm.css'
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import InputSelect from "../Input/inputSelect/InputSelect";
 import DATATEST from "./DataToTast/UserTest.json"
+import dataExerciseDay from "./DataToTast/dataExerciseDay.json"
 
 const UserForm = ({ }) => {
     const [userName, setUserName] = useState("");
@@ -24,15 +25,20 @@ const UserForm = ({ }) => {
         "quantity": "",
         "duration": ""
     }])
+    const [newExerciseDay, setNewExerciseDay] = useState({});
+    const [allExerciseDay, setAllExerciseDay] = useState([]);
+    // const [isChecked, setIsChecked] = useState(false);
+    const [durationTime, setDurationTime] = useState("")
+    const [disabledSubmit, setDisabledSubmit] = useState(true)
 
     // validate username
     let nameToCheck = "";
-    const userNameLength = nameToCheck.length < 4
+    let userNameLength = userName.length < 4
 
     function handleChange(event) {
         nameToCheck = event.target.value.toLocaleLowerCase()
 
-        console.log(nameToCheck)
+        // console.log(nameToCheck)
 
         if (DATATEST.find(data => data.username === nameToCheck || nameToCheck.length > 10)) {
 
@@ -92,8 +98,96 @@ const UserForm = ({ }) => {
 
     }, [userHeight, userWeight])
 
-    // addgoal
+    // exerciseDay
 
+    function addNewExerciseDay({ target }) {
+        const { name, value } = target;
+        setNewExerciseDay({ "name": name, "value": value });
+
+    }
+
+    // if(newExerciseDay.find(exerciseDay=> exerciseDay.name === name)){
+    //     console.log(name)
+    //     const test = newExerciseDay.filter((currentGoal) => currentGoal.name !== name);
+    //     console.log(test)
+    //     setNewExerciseDay(test)
+    // }
+
+    useEffect(() => {
+
+        if (Object.keys(newExerciseDay).length === 0) {
+            return
+        } else if (allExerciseDay.find(exerciseDay => exerciseDay.name === newExerciseDay.name)) {
+            setAllExerciseDay((prev) => {
+                return prev.filter((item) => item.name !== newExerciseDay.name)
+            });
+        } else {
+            setAllExerciseDay((prev) => {
+                return [...prev, newExerciseDay];
+            });
+        }
+        setNewExerciseDay({})
+
+
+    }, [newExerciseDay])
+
+    // add Duration Time
+    function addDurationTime(event) {
+        let value = event.target.value
+        console.log(value)
+        if (value.length === 2 || value.length === 5) {
+            value = value + ":"
+        } else if (value.length > 8) {
+            return
+        }
+        setDurationTime(value)
+
+    }
+
+    // user userSubmit
+    useEffect(() => {
+
+        if (userGoal.goal != "" && allExerciseDay.length != 0) {
+            setDisabledSubmit(false)
+            return
+        } else {
+            setDisabledSubmit(true)
+        }
+
+
+    }, [userGoal, allExerciseDay])
+
+
+
+    function userSubmit(event) {
+        event.preventDefault();
+    }
+
+    function resetFrom(event) {
+        event.preventDefault();
+        setUserName("") ;
+        setTakenName(false) ;
+        setGender("female");
+        setUserBirthDay("")
+        setUserAge("");
+        setUserHeight("")
+        setUserWeight("")
+        setUserBMI("")
+        setUserGoal([{
+            "goal": "",
+            "quantity": "",
+            "duration": ""
+        }])
+        setNewExerciseDay({});
+        setAllExerciseDay([]);        
+        setDurationTime("");
+        setDisabledSubmit(true);
+
+        
+
+ 
+
+    }
 
 
     return (
@@ -108,7 +202,8 @@ const UserForm = ({ }) => {
                             type="text" name="username" onChange={handleChange}
                             value={userName} style={userNameLength ? { borderColor: "red" } : null}
                         >
-                            {takenName ? `username is already taken please Change.` : "username is length 4-10"}
+                            {userNameLength ? "username is length 4-10" : null}
+                            {takenName ? `username is already taken please Change.` : null}
                         </Input>
                     </div>
                     <div className="user-infomation">
@@ -152,35 +247,45 @@ const UserForm = ({ }) => {
                     </div>
                     <div className="goal-date-time">
                         <div className="exercise-day">
-                            <label>Exercise day</label>
-                            <div className="data-goal">
-                                <CheckDateBox name="mon" value="monday"    >M</CheckDateBox>
-                                <CheckDateBox name="tue" value="tuesday"   >TU</CheckDateBox>
-                                <CheckDateBox name="wed" value="wednesday" >W</CheckDateBox>
-                                <CheckDateBox name="thu" value="thursday"  >TH</CheckDateBox>
-                                <CheckDateBox name="fri" value="friday"    >F</CheckDateBox>
-                                <CheckDateBox name="sat" value="saturday"  >SA</CheckDateBox>
-                                <CheckDateBox name="sun" value="sunday"    >SU</CheckDateBox>
+                            <span>
+                                <label>Exercise day</label>
+                                <p className="primary-text-color" hidden={allExerciseDay.length > 0 ? { color: "red" } : null}
+                                >
+                                    *
+                                </p>
+                            </span>
+                            <div className="data-goal" >
+                                {dataExerciseDay.map((text) => {
+                                    return (<CheckDateBox key={text.name} name={text.name} value={[text.value]}
+                                        onChange={addNewExerciseDay}
+                                    >
+                                        {text.children}
+                                    </CheckDateBox>)
+                                })
+                                }
                             </div>
 
                         </div>
 
-                        <Input className="start-time" htmlFor="set-time" label="Start time"
-                            type="time" id="set-time" name="set-time"
+                        <Input className="start-time" htmlFor="duration-time" label="Duration Time" placeholder="HH:mm:ss"
+                            style={durationTime === "" ? { borderColor: "red" } : null} onChange={addDurationTime} maxLength="8"
+                            type="text" id="duration-time" name="duration-time" value={durationTime}
                         >
-                            *It takes about 30 minutes or more.
+                            *It takes about 15 minutes or more.
                         </Input>
 
 
                     </div>
                     <div className="active-form">
                         <div>
-                            <Link to="/activity-report" >
-                                <Button type="submit" value="submit">Save</Button>
-                            </Link>
+
+                            <Button type="submit" value="submit" onSubmit={userSubmit} disabled={disabledSubmit} >Save</Button>
+
                         </div>
                         <div>
-                            <Button className="button-reset" type="reset" value="Reset">Reset</Button>
+
+                            <Button className="button-reset" type="reset" onClick={resetFrom} value="Reset">cancel</Button>
+                            
                         </div>
                     </div>
                 </form>

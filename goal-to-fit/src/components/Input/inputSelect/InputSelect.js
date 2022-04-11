@@ -47,8 +47,10 @@ const InputSelect = ({ children = "", addUserGoal }) => {
                     type="number" placeholder="(day)" name="duration-goal" />
             </>
             )
+        } else if (selectGoal === "Add you Goal") {
+            setSelectGoal("")    
+            return
         }
-        return
 
     }
 

@@ -1,0 +1,100 @@
+section {
+    margin: 0px;
+}
+
+.container-activity-report{
+    max-width: 1200px;    
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 auto;
+}
+
+/* container-css */
+.container-css-60{
+    /* border: 2px solid red; */
+    box-sizing: border-box;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    width: 0%;     
+     
+}
+
+/* header-act-ls */
+.header-act-ls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.header-act-ls  p{
+    margin: 0px;
+}
+
+/* act-user-profile */
+.card-user-profile {    
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+
+    border-radius: 20px;
+    box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.create-act-button{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5em;
+    ;
+}
+.act-user-profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+
+    border-bottom: 1px solid var(--secondary-icon-color);
+    border-top: 1px solid var(--secondary-icon-color);
+
+    padding: 15px 15px;
+}
+.act-user-image{
+    width: 80px;
+    height: 80px;
+    
+}
+
+.act-user-image img{
+    width: 100%;
+    background-color: yellow;
+    border-radius: 100%;
+}
+
+.act-user-info{
+    width: 100%;   
+    
+}
+.act-user-info table{
+    width: 100%;   
+}
+.border-red{
+    border: 2px solid red;
+}
+
+.border-bule{
+    border: 2px solid blue;
+}
+
+.border-green{
+    border: 2px solid green;
+}
+
+.border-yellow{
+    border: 2px solid yellow;
+}

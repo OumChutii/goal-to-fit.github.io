@@ -13,13 +13,13 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
             <nav className="container">
                 <header className="nav-header">
                     <div className="row w-100 mx-auto no-gutters">
-                        <div className="col-4">
+                        <div className="col-6">
                             <a className="head-title" href="#">
                                 <img className="" src="./img/gtf-logo.png" />
                                 <h2>{pageTitle}</h2>
                             </a>
                         </div>
-                        <div className="col-8 d-flex justify-content-end align-items-center">
+                        <div className="col-6 d-flex justify-content-end align-items-center">
                             <ul className="menu-nav">
                                 <Link to="/activity-report" >
                                     <NavBarButton fontAwesome="fa-home" aHref="#" >

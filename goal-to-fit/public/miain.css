@@ -73,6 +73,9 @@ li{
 .secondary-text-color{
     color: var(--secondary-text-color);
 }
+.third--text-color{
+    color: var(--third--text-color);
+}
 .primary-icon-color{
     color: var(--primary-icon-color);
 }
