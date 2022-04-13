@@ -6,10 +6,11 @@ import CheckDateBox from "../CheckDateBox/CheckDateBox";
 import Button from "../Button/Button"
 import Footer from "../Footer/Footer";
 import '../UserForm/UserForm.css'
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate , Redirect } from "react-router-dom";
 import InputSelect from "../Input/inputSelect/InputSelect";
 import DATATEST from "./DataToTast/UserTest.json"
 import dataExerciseDay from "./DataToTast/dataExerciseDay.json"
+
 
 const UserForm = ({ }) => {
     const [userName, setUserName] = useState("");
@@ -27,7 +28,7 @@ const UserForm = ({ }) => {
     }])
     const [newExerciseDay, setNewExerciseDay] = useState({});
     const [allExerciseDay, setAllExerciseDay] = useState([]);
-    // const [isChecked, setIsChecked] = useState(false);
+    const [isChecked, setIsChecked] = useState(false);
     const [durationTime, setDurationTime] = useState("")
     const [disabledSubmit, setDisabledSubmit] = useState(true)
 
@@ -182,6 +183,7 @@ const UserForm = ({ }) => {
         setAllExerciseDay([]);        
         setDurationTime("");
         setDisabledSubmit(true);
+        setIsChecked(!isChecked)
 
         
 
@@ -285,7 +287,7 @@ const UserForm = ({ }) => {
                         <div>
 
                             <Button className="button-reset" type="reset" onClick={resetFrom} value="Reset">cancel</Button>
-                            
+                            {isChecked?<Navigate to="/activity-report" /> : null}
                         </div>
                     </div>
                 </form>

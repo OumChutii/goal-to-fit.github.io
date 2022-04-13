@@ -2,8 +2,8 @@ section {
     margin: 0px;
 }
 
-.container-activity-report{
-    max-width: 1200px;    
+.container-activity-report {
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -11,32 +11,34 @@ section {
 }
 
 /* container-css */
-.container-css-60{
+.container-css-50 {
     /* border: 2px solid red; */
+    min-width: 315;
+    width: 50%;
     box-sizing: border-box;
     padding: 30px 10px;
     display: flex;
-    flex-direction: column; 
-    gap: 10px;
-    width: 0%;     
-     
+    flex-direction: column;
+    gap: 15px;
+
+
 }
 
 /* header-act-ls */
-.header-act-ls{
+.header-act-ls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    margin-bottom: 20px;
+    padding: 0 0px;
+    /* margin-bottom: 20px; */
 }
 
-.header-act-ls  p{
+.header-act-ls p {
     margin: 0px;
 }
 
 /* act-user-profile */
-.card-user-profile {    
+.card-user-profile {
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
@@ -45,56 +47,59 @@ section {
     box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid rgba(0, 0, 0, .125);
 }
-.create-act-button{
+
+.create-act-button {
     display: flex;
     justify-content: flex-end;
     margin-bottom: 0.5em;
     ;
 }
-.act-user-profile{
+
+
+
+/* "act-lists  */
+/* .act-container{
+    d
+} */
+.activity-title {
+    background-color: var(--primary-text-color);
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.act-lists {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
+    flex-direction: column;
+    max-height: 400px;
+    /* padding: 20px 20px; */
+    border-radius: 20px;
+    box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
+    /* background-color: #fff; */
+    background-clip: border-box;
+    /* border: 1px solid rgba(0,0,0,.125); */
 
-    border-bottom: 1px solid var(--secondary-icon-color);
-    border-top: 1px solid var(--secondary-icon-color);
-
-    padding: 15px 15px;
-}
-.act-user-image{
-    width: 80px;
-    height: 80px;
-    
-}
-
-.act-user-image img{
-    width: 100%;
-    background-color: yellow;
-    border-radius: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.act-user-info{
-    width: 100%;   
-    
-}
-.act-user-info table{
-    width: 100%;   
-}
-.border-red{
+
+
+.border-red {
     border: 2px solid red;
 }
 
-.border-bule{
+.border-bule {
     border: 2px solid blue;
 }
 
-.border-green{
+.border-green {
     border: 2px solid green;
 }
 
-.border-yellow{
+.border-yellow {
     border: 2px solid yellow;
 }

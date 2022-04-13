@@ -48,6 +48,7 @@ hr{
     align-items: center;
     margin: 0; /* reset margin ของ boostrap ใน tag ul */
 }
+
 .menu-list{
     list-style: none;
     margin-left: 10px;
@@ -59,7 +60,7 @@ hr{
     justify-content: center;
     align-items: center;
     width: 70px;
-    color: var(--primary-icon-color);
+    color: var(--secondary-text-color);
 }
 .menu-link.btn-logout{
     color: var(--primary-text-color);

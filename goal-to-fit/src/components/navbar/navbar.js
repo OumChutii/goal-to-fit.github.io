@@ -22,14 +22,14 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
                         <div className="col-6 d-flex justify-content-end align-items-center">
                             <ul className="menu-nav">
                                 <Link to="/activity-report" >
-                                    <NavBarButton fontAwesome="fa-home" aHref="#" >
+                                    <NavBarButton aClassName="menu-link secondary-text-color" fontAwesome="fa-home" aHref="#" >
                                         Home
                                     </NavBarButton>
                                 </Link>
                                 <Link to="/profile">
-                                    <NavBarButton fontAwesome="fa-user" aHref="#" >
+                                    <NavBarButton aClassName="menu-link secondary-text-color" fontAwesome="fa-user" aHref="#" >
                                         Profile
-                                    </NavBarButton>
+                                    </NavBarButton> 
                                 </Link>
                                 <Link to="/login">
                                     <NavBarButton aClassName="menu-link btn-logout" fontAwesome="fa-power-off"
