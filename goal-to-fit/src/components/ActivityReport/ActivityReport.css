@@ -74,7 +74,7 @@ section {
     display: flex;
     gap: 10px;
     flex-direction: column;
-    max-height: 400px;
+    max-height: 600px;
     /* padding: 20px 20px; */
     border-radius: 20px;
     box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
@@ -86,6 +86,47 @@ section {
     overflow-x: hidden;
 }
 
+/* -------------------------------ADS START------------------------------- */
+#ads .ads-fit {
+    margin-top: 20px;
+    position: relative;
+    
+  }
+  #ads .ads-fit .ads-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    filter: contrast(2);
+    object-position: center center;
+    border-radius: 20px;
+    box-shadow: 0 0 25px -5px rgb(0 0 0 / 15%);
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+  }
+  #ads .ads-fit .ads-head {
+    position: absolute;
+    right: 10px;
+    background-position-x: 341px;
+    top: 5px;
+    background-position-y: 250px;
+    content: "";
+    clear: both;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 0.8em;
+    font-size: 3.5em;
+    color: transparent;
+    background-image: url(https://imgz.io/images/2022/03/31/Masters-Sprint.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    filter: brightness(3);
+  }
+  
+  /* --------------------------------ADS END-------------------------------- */
 
 
 .border-red {

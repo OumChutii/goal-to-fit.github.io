@@ -1,15 +1,15 @@
 import React from 'react';
 import './IconAct.css';
 
-function IconAct({ iconResults }) {
+function IconAct({ src,alt,iconName }) {
 
 
   return (
-    <div div className="block-icon" >
+    <div  className="block-icon" >
       <button className="button-icon" >
-        <img src={iconResults.src} className="icon" />
+        <img src={src} alt={alt} className="icon" />
       </button>
-      <span>{iconResults.name}</span>
+      <div className="secondary-icon-color middle-font">{iconName}</div>
     </div>
 
   );

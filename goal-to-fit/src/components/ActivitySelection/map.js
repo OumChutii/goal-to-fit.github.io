@@ -4,7 +4,11 @@
                                             key={icon.id}
                                            />
                                     })
-                                    }                               
+                                    }         
+                                    
+                                    onChange=event => {
+                                        setSearchTerm(event.target.value)                           
+                                    }
 {/* <div className="row col-12">
                         <input
                             type="text"

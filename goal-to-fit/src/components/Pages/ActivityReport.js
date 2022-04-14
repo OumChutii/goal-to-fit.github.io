@@ -52,7 +52,7 @@ const ActivityReport = () => {
                         <div>
                             {/* <div className="activity-title bolder-font font-subhead mt-3 mb-3">Activity lists</div> */}
                             <div className='act-container'>
-                                <div className="act-lists">
+                                <div className="act-lists ">
                                     {Array.isArray(dataActCard) && dataActCard.map((act) => {
                                         return <ActivityCard key={act.id} src={act.src} alt={act.image}
                                             actName={act.actName} actDate={act.actDate} actQuantity={act.quantity}
@@ -64,7 +64,7 @@ const ActivityReport = () => {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="container-css-50 ">
+                    <div className="container-css-50 ">
                         <div>
                             <ActivityGraph />
 
@@ -73,7 +73,15 @@ const ActivityReport = () => {
                             <DonutChart />
 
                         </div>
-                    </div> */}
+                        <div>
+                            <div className="col-12  px-0" id="ads">
+                                <div className="ads-fit">
+                                    <img src="./img/Masters-Sprint.jpg" alt="master athlete sprint" className="ads-img" />
+                                    <h3 className="ads-head weight-900 p-2 text-right">GO<br />TO BE<br />MASTER</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </section>
                 {/* <!-- MAIN CONTENT SECTION END --> */}
