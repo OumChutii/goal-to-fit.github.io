@@ -183,12 +183,7 @@ const UserForm = ({ }) => {
         setAllExerciseDay([]);        
         setDurationTime("");
         setDisabledSubmit(true);
-        setIsChecked(!isChecked)
-
-        
-
- 
-
+        setIsChecked(!isChecked)     
     }
 
 

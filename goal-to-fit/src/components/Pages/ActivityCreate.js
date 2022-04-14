@@ -8,6 +8,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import "../ActivityCreate/ActivityCreate.css"
 import IconAct from "../IconAct/IconAct";
 import dataIconAct from "./DataToTast/dateActIcon.json";
+import { Link, Navigate, Redirect } from "react-router-dom";
 import { icon } from "@fortawesome/fontawesome-svg-core";
 
 
@@ -77,11 +78,11 @@ function ActivityCreate() {
 
     // set sate activity form
 
-    const [actDate, setactdate] = useState("")
+    const [actDate, setActDate] = useState("")
     function handleActDate(event) {
 
         const actDateString = event.target.value
-        setactdate(actDateString)
+        setActDate(actDateString)
 
     }
     const [actQuantity, setActQuantity] = useState("")
@@ -94,7 +95,7 @@ function ActivityCreate() {
     const [actDurationTime, setActDurationTime] = useState("")
     function addActDurationTime(event) {
         let value = event.target.value
-        console.log(value)
+
         if (value.length === 2 || value.length === 5) {
             value = value + ":"
         } else if (value.length > 8) {
@@ -102,6 +103,41 @@ function ActivityCreate() {
         }
         setActDurationTime(value)
 
+    }
+
+    const [isChecked, setIsChecked] = useState(false);
+    const [actDisabledSubmit, setActDisabledSubmit] = useState(true)
+
+    // user userSubmit 
+    useEffect(() => {
+
+        if (addActivity != "" && actDate != "" && actQuantity != "" && actDurationTime != "") {
+            setActDisabledSubmit(false)
+            return
+        } else {
+            setActDisabledSubmit(true)
+        }
+
+
+    }, [addActivity, actDate, actQuantity, actDurationTime])
+
+
+    function actSubmit(event) {
+        console.log(actDisabledSubmit)
+        setIsChecked(true)
+        setInterval(() => {
+            <Navigate to="/activity-report" />            
+          }, 3000);
+        event.preventDefault();
+    }
+
+    function actResetFrom(event) {
+        event.preventDefault();
+        setAddActivity("");
+        setActDate("");
+        setActQuantity("");
+        setActDurationTime("");
+        setIsChecked(!isChecked)
     }
 
     return (
@@ -120,10 +156,14 @@ function ActivityCreate() {
 
                         <div className="activity-select ">
                             <div className="activity-select-icon">
-                                {actSelect === "" ? null : Array.isArray(actSelect) && actSelect.map((icon,index) => {
-                                    return <IconAct key={index+99} num={`${icon.id}`} src={icon.src} alt={icon.name} actType={icon.type}
-                                        iconName={icon.name} setSelect={removeSelect}
-                                    />
+                                {actSelect === "" ? null : Array.isArray(actSelect) && actSelect.map((icon, index) => {
+                                    return (
+                                        
+                                            <IconAct key={index} num={`${icon.id}`} src={icon.src} alt={icon.name} actType={icon.type}
+                                                iconName={icon.name} setSelect={removeSelect}
+                                            />
+                                        
+                                    );
                                 })
                                 }
                             </div>
@@ -144,41 +184,57 @@ function ActivityCreate() {
                                     } else if (value.name.toLowerCase().includes(searchTerm.toLowerCase())) {
                                         return value
                                     }
-                                }).map((icon,index) => {
+                                }).map((icon, index) => {
 
-                                    return <IconAct  key={index} num={icon.id} src={icon.src} alt={icon.name} name={icon.name}
-                                        iconName={icon.name} setSelect={addSelect}
-                                    />
+                                    return (
+                                       
+                                            <IconAct key={index} num={icon.id} src={icon.src} alt={icon.name} name={icon.name}
+                                                iconName={icon.name} setSelect={addSelect}
+                                            />
+
+                                        
+                                    );
 
                                 })
                                 }
                             </div>
                         </div>
                     </div>
-                    <div className="container-css-50 border-red" hidden={!isShowFrom}>
-                        <p className="secondary-text-color middle-font font-large-head">Activity name</p>
+                    <div className="container-act-sel-from " hidden={!isShowFrom}>
+                        <div className="middle-font font-large-head  act-create-title"
+                        >
+                            Activity name
 
-                        <div className="act-form-name">
-                            {Array.isArray(addActivity) && addActivity.map((icon,index) => {
-                                return (
-                                    <>
-                                        <IconAct src={icon.src} alt={icon.name} actType={icon.type} iconName={icon.name} key={index+100}
-                                         num={`${icon.id}`} setSelect={removeSelect}
-                                        />
+                            <Button className="button-close" onClick={removeSelect} value="close"
+                            >
+                                <i className="fa fa-plus"></i>
+                            </Button>
 
-                                    </>
-                                );
-                            })
-                            }
-                            <div>
-                                <Input className="secondary-text-color" htmlFor="activity-date" label="activity-date"
+                        </div>
+
+                        <div className="act-create ">
+                            <div className="act-create-icon ">
+                                {Array.isArray(addActivity) && addActivity.map((icon, index) => {
+                                    return (
+                                      
+                                            <IconAct  key={index}  src={icon.src} alt={icon.name} actType={icon.type} iconName={icon.name}
+                                                num={`${icon.id}`} setSelect={removeSelect}
+                                            />
+
+                                    );
+                                })
+                                }
+
+                            </div>
+                            <div className="act-create-input ">
+                                <Input htmlFor="activity-date" label="activity-date"
                                     style={actDate === "" ? { borderColor: "red" } : null}
                                     type="date" name="activity-date" onChange={handleActDate} value={actDate}
                                 >
                                     {actDate === "" ? `please insert activity date` : null}
                                 </Input>
                             </div>
-                            <div>
+                            <div className="act-create-input">
                                 <Input htmlFor="quantity" label="quantity" style={actQuantity === "" ? { borderColor: "red" } : null}
                                     type="text" placeholder="add you quantity" name="weight" onChange={addActQuantit} value={actQuantity}
                                 >
@@ -186,8 +242,8 @@ function ActivityCreate() {
 
                                 </Input>
                             </div>
-                            <div>
-                                <Input htmlFor="act-duration-time" label="Duration Time" placeholder="HH:mm:ss"
+                            <div className="act-create-input">
+                                <Input htmlFor="act-duration-time" label="duration-time" placeholder="HH:mm:ss"
                                     style={actDurationTime === "" ? { borderColor: "red" } : null} onChange={addActDurationTime} maxLength="8"
                                     type="text" id="duration-time" name="act-duration-time" value={actDurationTime}
                                 >
@@ -195,6 +251,16 @@ function ActivityCreate() {
                                 </Input>
 
                             </div>
+                            <div className="act-create-button">
+                                <Button type="submit" value="submit" onClick={actSubmit} disabled={actDisabledSubmit} style={actDisabledSubmit? { backgroundColor: "var( --secondary-icon-color)" } : null}
+                                >Save</Button>
+                                
+
+                                <Button className="button-reset" type="reset" onClick={actResetFrom} value="Reset">cancel</Button>
+                                {isChecked ? <Navigate to="/activity-report" /> : null}
+                            </div>
+
+
                         </div>
 
                     </div>
