@@ -5,7 +5,7 @@ import './NoAccount.css'
 const NoAccount = ({ tagtitle, textA1, textA2, href1 = '#', href2 = '#', hidden= false }) => {
     return (
         <>
-            <p className="secondary-text-color" hidden={hidden}  >
+            <p className="secondary-text-color no-account" hidden={hidden}  >
                 {tagtitle}
             </p>
             <div className="social-profiles">

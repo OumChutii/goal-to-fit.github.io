@@ -1,12 +1,27 @@
 import React from "react";
 import "./ActivityCard.css"
 
-function ActivityCard({src,alt,actName,actDate,actQuantity,actDuration}) {
+function ActivityCard({ src, alt, actName, actDate, actQuantity, actDuration, actType }) {
+
+    function iconType(actType) {
+        if (actType === "indoor") {
+            return <i className="fa-solid fa-house primary-button-color"></i>;
+        } else if (actType === "outdoor") {
+            return <i className="fa-solid fa-sun secondary-button-color"></i>;
+        } else {
+            return null;
+        }
+    }
+
+
     return (
         <>
             <div className="col-12 card-act">
                 <div className="row justify-content-around w-100 mx-auto">
                     <div className="col-3 act-icon ">
+                        <div className="act-type-report">
+                            {iconType(actType)}
+                        </div>
                         <img className="mx-auto" src={src} alt={alt} />
                     </div>
                     <div className="col-9 justify-content-between">

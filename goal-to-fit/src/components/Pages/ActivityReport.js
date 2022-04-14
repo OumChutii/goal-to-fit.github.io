@@ -33,7 +33,7 @@ const ActivityReport = () => {
                         <div>
                             <div className="card-user-profile ">
                                 <div className="create-act-button ">
-                                    <NavLink to="/ativity-selection" className="d-flex justify-content-center secondary-text-color align-items-center">
+                                    <NavLink to="/ativity-create" className="d-flex justify-content-center secondary-text-color align-items-center">
                                         {/* <!-- Right Button --> */}
                                         <i className="fa fa-plus"></i>
                                         {/* <!-- Right Button --> */}
@@ -54,7 +54,7 @@ const ActivityReport = () => {
                             <div className='act-container'>
                                 <div className="act-lists ">
                                     {Array.isArray(dataActCard) && dataActCard.map((act) => {
-                                        return <ActivityCard key={act.id} src={act.src} alt={act.image}
+                                        return <ActivityCard key={act.id} src={act.src} alt={act.image} actType={act.type}
                                             actName={act.actName} actDate={act.actDate} actQuantity={act.quantity}
                                             actDuration={act.duration}
                                         />

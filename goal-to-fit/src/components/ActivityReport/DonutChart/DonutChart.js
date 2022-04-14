@@ -4,9 +4,9 @@ import "./DonutChart.css"
 function DonutChart({ }) {
     return (
         <>
-            <div class="col-12 order-3  mt-3"
+            <div className="col-12 order-3  mt-3"
                 id="donut">
-                <div class="card">
+                <div className="card">
                     <div className="card-body  justify-content-center align-items-center text-center">
                         {/* <!-- Donut chart --> */}
                         <svg className="m-1 circle-chart-day"

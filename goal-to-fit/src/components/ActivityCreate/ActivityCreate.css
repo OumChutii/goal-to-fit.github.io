@@ -5,13 +5,13 @@
 section {
     margin: 0px;
 }
-.wrapper-selection{
+.wrapper-create{
     min-height: 100vh;
     margin-bottom: -60px;
-    height: 100vh;
+   
 }
 
-.container-activity-selection{
+.container-activity-create{
     height: 100%;
     display: flex;
     justify-content: center;

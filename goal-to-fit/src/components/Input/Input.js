@@ -7,7 +7,7 @@ const Input = ({ children = "", htmlFor = "", label = "", className = "display-b
 
     return (
         <span className={className}>
-            <label hidden={label === "" ? true : false} className= "primary-text-color"
+            <label hidden={label === "" ? true : false} className= "secondary-text-color middle-font"
                 htmlFor={htmlFor}
             >
                 {label}

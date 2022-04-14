@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ActivityReport from '../Pages/ActivityReport';
 import Login from '../Pages/Login';
 import Signup from '../Pages/Signup';
-import ActivitySelection from '../Pages/ActivitySelection';
+import ActivityCreate from '../Pages/ActivityCreate';
 import UserForm from '../Pages/UserForm';
 import './App.css';
 
@@ -19,7 +19,7 @@ function App() {
         <Route path="signup" element={<Signup />} />
         <Route path="profile" element={<UserForm />} />
         <Route path="activity-report" element={<ActivityReport />} />       
-        <Route path="ativity-selection" element={<ActivitySelection />} />
+        <Route path="ativity-create" element={<ActivityCreate />} />
       </Routes>
     </BrowserRouter>
 

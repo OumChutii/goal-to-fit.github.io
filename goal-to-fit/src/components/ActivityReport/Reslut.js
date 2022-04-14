@@ -148,7 +148,7 @@
                             </div>
                             <div className="create-btn col-4 d-none d-md-flex px-0">
                                 <div className="col-auto d-flex justify-content-end align-items-center">
-                                    <NavLink to="/ativity-selection" className="d-flex justify-content-center primary-red align-items-center">
+                                    <NavLink to="/ativity-create" className="d-flex justify-content-center primary-red align-items-center">
                                         {/* <!-- Right Button --> */}
                                         <i className="fa fa-plus"></i>
                                         {/* <!-- Right Button --> */}
