@@ -9,6 +9,12 @@
                                     onChange=event => {
                                         setSearchTerm(event.target.value)                           
                                     }
+
+
+                                    Array.isArray(resultIcon) && resultIcon.map((icon) => {
+                                        return <IconAct key={icon.id} src={icon.src} alt={icon.image}
+                                            iconName={icon.name}
+                                        />})
 {/* <div className="row col-12">
                         <input
                             type="text"

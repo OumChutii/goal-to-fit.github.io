@@ -84,6 +84,16 @@ li{
 }
 /* สีหลัก รอง ของ ข้อความ และ ไอคอน */
 
+.primary-button-color{
+    color: var(--primary-button-color);
+    filter:drop-shadow(3px 1px 4px  #58ff37);
+    
+}
+.secondary-button-color{
+    color: #ff9800;
+    filter:drop-shadow(3px 1px 4px #ff9800);
+}
+
 
 /* ตัวอักษร บาง หนา */
 .regular-font{
