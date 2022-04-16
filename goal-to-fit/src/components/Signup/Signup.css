@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-input[type="email"], input[type="password"]{
+.containe-signup input[type="email"], input[type="password"], input[type="tel"]{
     /* font-family: 'Outfit', sans-serif; */
     padding: 0.5rem 0rem;
     font-size: 1rem;

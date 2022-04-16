@@ -20,16 +20,17 @@ const Login = () => {
                     </ImageTitle>                 
                     <div className="login">
                         <Title>Login</Title>
-                        <Input  className="add-input" htmlFor="Email" label='Email'
+                        <Input  className="add-input" htmlFor="email" label='Email'
                                 id='email' type='email' name='email' 
                                 placeholder='Enter your email' 
                                 //  value={email} 
                                 //  isInvalid={isInvalid}
                                 //  onChange={e => setEmail(e.target.value)}
                         /> 
-                        <Input className="add-input" htmlFor="Password" label='Password' 
+                        <Input className="add-input" htmlFor="password" label='Password' 
                                 id='Password'  type="password" placeholder="***********"                      
                         />
+                       
                         <Link to="/profile">
                              <Button  type="submit" value="submit">Login</Button>
                         </Link>                      

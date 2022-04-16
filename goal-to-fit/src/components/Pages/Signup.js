@@ -21,7 +21,7 @@ const Signup = () => {
     useEffect(() => {
         const btnSignin = document.querySelector('.button-submit');
 
-        if(value){
+        if (value) {
 
             btnSignin.classList.remove('disabled');
             btnSignin.removeAttribute('disabled');
@@ -52,11 +52,14 @@ const Signup = () => {
                         <Input className="add-input" htmlFor="Password" label='Password'
                             id='Password' type="password" placeholder="***********" required
                         />
+                        <Input className="add-input" htmlFor="telNo" label='Phone number'
+                            id='telNo' type="tel" placeholder="000-000-0000"
+                        />
                         <AgreeMent id="terms" type="checkbox" name="terms"
                             value={value || false} onClick={handleValue} required />
 
                         <Link to="/activity-report">
-                            <Button type="submit" value="submit"                            
+                            <Button type="submit" value="submit"
                             >
                                 Continue
                             </Button>

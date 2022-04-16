@@ -18,7 +18,7 @@ const AgreeMent = ({ ...props }) => {
     return (
         <div className="AgreeMent">
             <input {...props} />
-            <label for="checkbox"> I agree to the<span onClick={servicesShow} > Terms of Services</span>and <span onClick={servicesShow}> Privacy Policy</span>.
+            <label htmlFor="checkbox"> I agree to the<span onClick={servicesShow} > Terms of Services</span>and <span onClick={servicesShow}> Privacy Policy</span>.
             </label>
             <PrivacyPolicy  dispalyState={showService}
                             servicesClose={servicesClose}
