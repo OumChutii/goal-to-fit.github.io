@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css"
 import NavBarButton from "./NavBarButton/NavBarButton";
-import { Link, Route, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
