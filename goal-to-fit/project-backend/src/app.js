@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 
 const usersRouter = require('./routes/users')
-const actRouter = require('./routes/activity')
+const actRouter = require('./routes/activities')
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 app.use('/users', usersRouter)
-app.use('/activity', actRouter)
+app.use('/activities', actRouter)
 
 
 const PORT = process.env.PORT || 4001;

@@ -8,9 +8,9 @@ router.use('/records', recordeRoute);
 router.get('/',(req, res, next) => {
     res.send(me)
 });
-router.get('/userProfile',(req, res, next) => {});
-router.post('/userProfile',(req, res, next) => {});
-router.put('/userProfile',(req, res, next) => {});
-router.delete('/userProfile',(req, res, next) => {});
+router.get('/',(req, res, next) => {});
+router.post('/',(req, res, next) => {});
+router.put('/',(req, res, next) => {});
+router.delete('/',(req, res, next) => {});
 
 module.exports = router;
