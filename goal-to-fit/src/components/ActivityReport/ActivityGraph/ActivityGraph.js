@@ -75,7 +75,7 @@ export const data = {
     ],
 };
 
-function ActivityGraph({ }) {
+function ActivityGraph(prop) {
     return (
         <>
             <div className="col-12  order-3 mb-3 " id="graph-title">

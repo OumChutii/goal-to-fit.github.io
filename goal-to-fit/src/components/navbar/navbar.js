@@ -14,10 +14,8 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
                 <header className="nav-header">
                     <div className="row w-100 mx-auto no-gutters">
                         <div className="col-6">
-                            <a className="head-title" href="#">
-                                <img className="" src="./img/gtf-logo.png" />
-                                <h2>{pageTitle}</h2>
-                            </a>
+                            <img className="" src="./img/gtf-logo.png" alt="img-logo" />
+                            <h2>{pageTitle}</h2>
                         </div>
                         <div className="col-6 d-flex justify-content-end align-items-center">
                             <ul className="menu-nav">
@@ -29,7 +27,7 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
                                 <Link to="/profile">
                                     <NavBarButton aClassName="menu-link secondary-text-color" fontAwesome="fa-user" aHref="#" >
                                         Profile
-                                    </NavBarButton> 
+                                    </NavBarButton>
                                 </Link>
                                 <Link to="/login">
                                     <NavBarButton aClassName="menu-link btn-logout" fontAwesome="fa-power-off"
@@ -37,7 +35,7 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
                                         Logout
                                     </NavBarButton>
                                 </Link>
-                                
+
                             </ul>
                         </div>
                     </div>

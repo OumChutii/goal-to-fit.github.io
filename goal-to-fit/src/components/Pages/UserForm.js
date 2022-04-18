@@ -6,13 +6,13 @@ import CheckDateBox from "../CheckDateBox/CheckDateBox";
 import Button from "../Button/Button"
 import Footer from "../Footer/Footer";
 import '../UserForm/UserForm.css'
-import { Link, Navigate , Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import InputSelect from "../Input/inputSelect/InputSelect";
 import DATATEST from "./DataToTast/UserTest.json"
 import dataExerciseDay from "./DataToTast/dataExerciseDay.json"
 
 
-const UserForm = ({ }) => {
+const UserForm = () => {
     const [userName, setUserName] = useState("");
     const [takenName, setTakenName] = useState(false);
     const [gender, setGender] = useState("female");
@@ -148,7 +148,7 @@ const UserForm = ({ }) => {
     // user userSubmit
     useEffect(() => {
 
-        if (userGoal.goal != "" && allExerciseDay.length != 0) {
+        if (userGoal.goal !== "" && allExerciseDay.length !== 0) {
             setDisabledSubmit(false)
             return
         } else {
@@ -193,7 +193,7 @@ const UserForm = ({ }) => {
             <section className="container-userfrom ">
                 <form>
                     <div className="user-profile secondary-text-color ">
-                        <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"profile-name-image_title"}
+                        <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"profile-name-image_title"} alt={"img-user"}
                             classImg={"icon-logo"}>{userName}</ImageTitle>
                         <Input placeholder="Add User Name " maxLength="10"
                             type="text" name="username" onChange={handleChange}
@@ -231,7 +231,7 @@ const UserForm = ({ }) => {
                             <Input htmlFor="weight" label="Weight" min="1" style={userWeight === "" ? { borderColor: "red" } : null}
                                 type="number" placeholder="(kg)" name="weight" onChange={addWeight} value={userWeight}
                             >
-                                {userWeight === "" ? `please insert your weight(kg)` : `your weight is  ${userWeight}`}
+                                {userWeight === "" ? `please insert your weight(kg)` : `your weight is  ${userWeight} & BMI ${userBMI}`}
 
                             </Input>
                         </div>

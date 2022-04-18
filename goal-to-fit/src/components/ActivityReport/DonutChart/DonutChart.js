@@ -1,7 +1,7 @@
 import React from "react";
 import "./DonutChart.css"
 
-function DonutChart({ }) {
+function DonutChart() {
     return (
         <>
             <div className="col-12 order-3  mt-3"

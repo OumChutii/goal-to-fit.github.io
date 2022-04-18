@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import '../Login/Login.css'
 import ImageTitle from "../ImageTitle/ImageTitle";
@@ -15,7 +15,7 @@ const Login = () => {
           <section className="section-login">
                 <div className="container-login"> 
                     <ImageTitle imgSrc={'./img/gtf-logo.png'} classDiv={"head-logo-image_title"}
-                    classImg={"icon-logo"}>
+                    classImg={"icon-logo"} alt={"icon-console"}>
                         Goal to fit
                     </ImageTitle>                 
                     <div className="login">

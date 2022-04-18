@@ -111,7 +111,7 @@ function ActivityCreate() {
     // user userSubmit 
     useEffect(() => {
 
-        if (addActivity != "" && actDate != "" && actQuantity != "" && actDurationTime != "") {
+        if (addActivity !== "" && actDate !== "" && actQuantity !== "" && actDurationTime !== "") {
             setActDisabledSubmit(false)
             return
         } else {
@@ -178,12 +178,13 @@ function ActivityCreate() {
                         />
                         <div className="container-list ">
                             <div className="activity-list">
-                                {resultIcon.filter((value) => {
-                                    if (searchTerm == "") {
+                                {resultIcon.filter((value) => {                                    
+                                    if (searchTerm === "") {
                                         return value
                                     } else if (value.name.toLowerCase().includes(searchTerm.toLowerCase())) {
                                         return value
                                     }
+                                    return value
                                 }).map((icon, index) => {
 
                                     return (

@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer'
 import NavBar from '../NavBar/NavBar';
 import '../ActivityReport/ActivityReport.css'
 import ActivityCard from '../ActivityReport/ActivityCard/ActivityCard';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import dataActCard from './DataToTast/dataToActReportCard.json'
 import UserInfo from '../ActivityReport/UserInfo/UserInfo';
 import dataUser from './DataToTast/dataUserInfo.json'
