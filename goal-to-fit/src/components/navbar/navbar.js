@@ -14,8 +14,10 @@ function NavBar({ pageTitle = "Please Add Pagetitle" }) {
                 <header className="nav-header">
                     <div className="row w-100 mx-auto no-gutters">
                         <div className="col-6">
-                            <img className="" src="./img/gtf-logo.png" alt="img-logo" />
-                            <h2>{pageTitle}</h2>
+                            <div className="head-title">
+                                <img className="" src="./img/gtf-logo.png" alt="img-logo" />
+                                <h2>{pageTitle}</h2>
+                            </div>
                         </div>
                         <div className="col-6 d-flex justify-content-end align-items-center">
                             <ul className="menu-nav">
