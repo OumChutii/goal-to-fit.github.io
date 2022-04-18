@@ -8,8 +8,8 @@ import 'font-awesome/css/font-awesome.min.css';
 import "../ActivityCreate/ActivityCreate.css"
 import IconAct from "../IconAct/IconAct";
 import dataIconAct from "./DataToTast/dateActIcon.json";
-import { Link, Navigate, Redirect } from "react-router-dom";
-import { icon } from "@fortawesome/fontawesome-svg-core";
+import {  Navigate, } from "react-router-dom";
+
 
 
 
