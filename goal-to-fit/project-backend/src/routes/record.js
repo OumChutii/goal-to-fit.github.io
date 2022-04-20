@@ -1,148 +1,85 @@
-const express = require('express');
-const records = require('../DataToTast/userRecord.json')
+const express = require("express");
+const RecordModel = require("../models/record");
 
 const router = express.Router();
 
-router.get('/', (req, res, next) => {
-    res.send(records);
+router.use("/:recordId", async (req, res, next) => {
+  const recordId = req.params.recordId;
+
+  // Check if recordId is a valid mongodb objectId
+  if (recordId && !recordId.match(/^[0-9a-fA-F]{24}$/)) {
+    // You can response 400 too since client should request with valid it
+    // But this way it's easier to handle status code
+    return res.status(404).send("Record not found");
+  }
+  const foundRecord = await RecordModel.findById(recordId);
+  if (!foundRecord) {
+    return res.status(404).send("Record not found");
+  }
+
+  req.record = foundRecord;
+  req.recordIndex = recordId;
+  return next();
 });
 
-router.get('/:recordId', (req, res, next) => {
-
-    const recordId = req.params.recordId;
-    const index = records.findIndex((r) => r.id === recordId);
-    const foundRecord = records[index]
-
-    if (!foundRecord) {
-        return res.status(404).send(`Not found Record ID ${recordId}`)
-    }
-    return res.send(foundRecord)
-
+router.get("/:recordId", (req, res, next) => {
+  
+  return res.send(req.record);
 });
 
-router.post('/', (req, res, next) => {
-    const body = req.body;
-
-    const recordIsObject = Object.keys(body).length > 0 && Object.keys(body).length === 7;
-
-
-    const recordHasOwnKey = body.hasOwnProperty("image") && body.hasOwnProperty("src") && body.hasOwnProperty("actName") &&
-        body.hasOwnProperty("type") && body.hasOwnProperty("actDate") && body.hasOwnProperty("quantity") &&
-        body.hasOwnProperty("duration");
-
-
-    let newRecord = "";
-
-    if (!recordIsObject) {
-        return res.status(400).send(`Invalid request 1`);
-    }
-    if (!recordHasOwnKey) {
-        return res.status(400).send(`Invalid request 2`);
-    };
-
-    const bodyIsAvailable = !body.image || !body.src || !body.actName || !body.type ||
-        !body.actDate || !body.quantity || !body.duration
-   
-
-    if (bodyIsAvailable) {
-        return res.status(400).send(`Invalid request 3`);
-    }
-
-    const currentId = records.length + 1;
-    newRecord = {
-        id: currentId.toString(),
-        image: body.image,
-        src: body.src,
-        actName: body.actName,
-        type: body.type,
-        actDate: body.actDate,
-        quantity: body.quantity,
-        duration: body.duration
-    }
-
-    records.push(newRecord);
-    return res.status(201).send(records);
-
+router.get("/", async (req, res, next) => {
+  const records = await RecordModel.find({});
+  res.send(records);
 });
 
-router.put('/:recordId', (req, res, next) => {
+router.post("/", async (req, res, next) => {
+  const body = req.body;
 
-    const recordId = req.params.recordId;
-    const index = records.findIndex((r) => r.id === recordId);
-    const foundRecord = records[index]
+  const newRecord = new RecordModel(body);
 
-    if (!foundRecord) {
-        return res.status(404).send(`Not found Record ID ${recordId}`)
+  const errors = newRecord.validateSync();
+  if (errors) {
+    const errorFieldNames = Object.keys(errors.errors);
+    if (errorFieldNames.length > 0) {
+      return res.status(400).send(errors.errors[errorFieldNames[0]].message);
     }
+  }
 
-    const body = req.body;
+  await newRecord.save();
 
-    const recordIsObject = Object.keys(body).length > 0 && Object.keys(body).length === 7;
-
-
-    const recordHasOwnKey = body.hasOwnProperty("image") && body.hasOwnProperty("src") && body.hasOwnProperty("actName") &&
-        body.hasOwnProperty("type") && body.hasOwnProperty("actDate") && body.hasOwnProperty("quantity") &&
-        body.hasOwnProperty("duration");
-    
-
-
-    if (!recordIsObject) {
-        return res.status(400).send(`Invalid request`);
-    }
-    if (!recordHasOwnKey) {
-        return res.status(400).send(`Invalid request`);
-    };
-
-    const bodyIsAvailable = body.image && body.src && body.actName && body.type &&
-        body.actDate && body.quantity && body.duration
-
-    if (bodyIsAvailable) {
-        let newRecord = {
-            id: req.params.recordId,
-            image: body.image,
-            src: body.src,
-            actName: body.actName,
-            type: body.type,
-            actDate: body.actDate,
-            quantity: body.quantity,
-            duration: body.duration
-        };
-        records.forEach(record => {
-            if (record.id === newRecord.id) {
-                record.image = newRecord.image !="" ? newRecord.image : record.image;
-                record.src = newRecord.src !="" ? newRecord.src : record.src;
-                record.actName = newRecord.actName !="" ? newRecord.actName : record.actName;
-                record.type = newRecord.type !=""? newRecord.type : record.type;
-                record.actDate = newRecord.actDate !="" ? newRecord.actDate : record.actDate;
-                record.quantity = newRecord.quantity !=""? newRecord.quantity : record.quantity;
-                record.duration = newRecord.duration !=""? newRecord.duration : record.duration;
-                
-    
-                return res.status(201).send(record);
-            }
-        })
-    }
-    return res.status(400).send(`Invalid request`);
-
-
+  return res.status(201).send(newRecord);
 });
-router.delete('/:recordId', (req, res, next) => { 
-    const recordId = req.params.recordId;
-    console.log(recordId)
-    const index = records.findIndex((r) => r.id === recordId);
-    const foundRecord = records[index]
 
-    if (!foundRecord) {
-        return res.status(404).send(`Not found Record ID ${recordId}`)
+router.put("/:recordId", async (req, res, next) => {
+  const body = req.body;
+  const index = req.recordIndex;
+  // find the request doc by it's id
+  const recordToBeUpdated = req.record;
+
+  const errors = recordToBeUpdated.validateSync();
+  if (errors) {
+    const errorFieldName = object.keys(errors.errors);
+    if (errorFieldName.length > 0) {
+      return res.status(400).send(errors.errors[errorFieldName[0]].message);
     }
-    console.log(recordId.toString())
-    
-    const newRecords =records.filter(record => record.id != recordId.toString());
+  }
+  // prepare data to update by using object dot operator
+  const updatedRecord = {
+    _id: index,
+    ...body,
+  };
+  // log out what we get for updating document
+  console.log("updated data", updatedRecord);
+  // update exist doc by using Model.overwrite method
+  recordToBeUpdated.overwrite(updatedRecord);
+  await recordToBeUpdated.save();
+  // return res.status(201).send(records[index]);
+  return res.status(201).send(recordToBeUpdated);
+});
 
-    return res.status(200).send(newRecords);
-
-
-
+router.delete("/:recordId", async (req, res, next) => {
+  await RecordModel.deleteOne({ _id: req.params.recordId });
+  return res.status(204).send(`RecordId ${req.params.recordId} successfully removed`); // 204 = No content which mean it successfully removed
 });
 
 module.exports = router;
